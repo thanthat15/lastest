@@ -9,7 +9,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
   // โหลดตัวแปรสภาพแวดล้อมจากไฟล์ .env (ถ้ามี)
-  await dotenv.load(fileName: ".env"); // เปลี่ยนเป็น .env ในโปรเจคจริง
+  await dotenv.load(fileName: ".env");
 
   // เรียกใช้งาน Dependency Injection ก่อนแอปเริ่ม
   await initDI(); 
@@ -40,4 +40,4 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-}
+}           

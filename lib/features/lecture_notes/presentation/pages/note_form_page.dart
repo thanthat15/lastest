@@ -213,7 +213,7 @@ class _NoteFormPageState extends State<NoteFormPage> {
                     }
 
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('บันทึกโน้ตลงเครื่องสำเร็จ! (Offline Ready)')),
+                      const SnackBar(content: Text('บันทึกโน้ตลงเครื่องสำเร็จ!')),
                     );
                     Navigator.pop(context);
                   },
