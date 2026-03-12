@@ -1,0 +1,58 @@
+name: lab2
+description: "A smart lecture notes app with OCR and AI summarization."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # 1. Architecture & State Management
+  get_it: ^7.6.4                 # Dependency Injection (DI)
+  dartz: ^0.10.1                 # Functional Programming (Either<Failure, Success>)
+  flutter_bloc: ^9.1.1           # State Management (เลือกใช้ BLoC)
+  equatable: ^2.0.8              # ช่วยเปรียบเทียบ Object (ใช้คู่กับ BLoC)
+
+  # 2. Offline-First & Local Storage
+  sqflite: ^2.3.0                # Relational Database หลักสำหรับเก็บ Note (Offline)
+  path_provider: ^2.1.2          # หา Path ในเครื่องเพื่อเก็บไฟล์ฐานข้อมูล
+  shared_preferences: ^2.2.2     # เก็บการตั้งค่า (Settings เช่น Dark Mode)
+  hive: ^2.2.3                   # Key-Value Database สำหรับทำ Cache ผลลัพธ์ AI
+  hive_flutter: ^1.1.0           # เครื่องมือเสริมสำหรับใช้ Hive กับ Flutter
+
+  # 3. Networking & API
+  dio: ^5.4.0                    # ทำ HTTP Request (REST API) + Interceptors
+  freezed_annotation: ^2.4.1     # ใช้สร้าง Model แบบ Immutable
+  json_annotation: ^4.8.1        # ใช้จัดการ JSON Serialization
+
+  # 4. AI & Machine Learning Integration
+  google_mlkit_text_recognition: ^0.11.0 # On-device ML (สแกนข้อความจากรูปภาพ)
+  image_picker: ^1.0.4           # สำหรับถ่ายรูปหรือเลือกรูปจากแกลเลอรีส่งให้ ML Kit
+
+  # 5. UI, UX & Routing
+  auto_route: ^7.8.4             # จัดการ Routing และส่งพารามิเตอร์
+  flutter_dotenv: ^6.0.0        # ทำงานกับตัวแปรสภาพแวดล้อม (.env)
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+  # 6. Testing (Unit & Widget & Integration Test)
+  mocktail: ^1.0.2               # สำหรับทำ Mocking ใน Unit Test
+
+  # Code Generators (เครื่องมือสร้างโค้ดอัตโนมัติ)
+  build_runner: ^2.4.7           # ตัวรันคำสั่ง Generate Code
+  auto_route_generator: ^7.3.2   # สร้างไฟล์ Routing
+  freezed: ^2.4.5                # สร้างไฟล์ Data Class
+  json_serializable: 6.8.0      # สร้างไฟล์แปลง JSON
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
