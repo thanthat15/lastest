@@ -12,7 +12,7 @@ A new Flutter project.
 
 ## 🎬 Demonstration Video
 *(สามารถรับชมวิดีโอสาธิตการทำงานของแอปพลิเคชัน โหมด Offline & Online, UI Animation และการรัน Test ได้ที่ลิงก์ด้านล่างนี้)*
-👉 **[ใส่ลิงก์ YouTube หรือ Google Drive ของวิดีโอพรีเซนต์ที่นี่]**
+👉 **[https://drive.google.com/file/d/1lrY8mPuoPHVr7HAN7lGAmiTV_vlIHVRN/view?usp=sharing]**
 
 ---
 
